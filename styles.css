@@ -1,0 +1,132 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #4a6cf7, #6a11cb);
+    color: #fff;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+#themeToggle {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #fff;
+    color: #4a6cf7;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+#themeToggle:hover {
+    transform: scale(1.05);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.converter {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: 2px solid #4a6cf7;
+}
+
+.controls, .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    background: #4a6cf7;
+    color: #fff;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #6a11cb;
+    transform: scale(1.05);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Dark Mode */
+body.dark {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+body.dark textarea {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    border: 1px solid #444;
+}
+
+body.dark button {
+    background: #6a11cb;
+}
+
+body.dark button:hover {
+    background: #4a6cf7;
+}
+
+body.dark header {
+    background: #1e1e1e;
+}

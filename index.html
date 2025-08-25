@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Text Converter Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Advanced Text Converter Tool</h1>
+        <button id="themeToggle">🌙 Dark Mode</button>
+    </header>
+
+    <main>
+        <section class="converter">
+            <textarea id="inputText" placeholder="Type or paste your text here..." autofocus></textarea>
+            <div class="controls">
+                <button onclick="convertText('uppercase')">UPPERCASE</button>
+                <button onclick="convertText('lowercase')">lowercase</button>
+                <button onclick="convertText('title')">Title Case</button>
+                <button onclick="convertText('sentence')">Sentence case</button>
+                <button onclick="convertText('toggle')">Toggle Case</button>
+                <button onclick="removeExtraSpaces()">Remove Extra Spaces</button>
+                <button onclick="undo()">Undo</button>
+                <button onclick="redo()">Redo</button>
+            </div>
+            <textarea id="outputText" placeholder="Converted text will appear here..." readonly></textarea>
+
+            <div class="actions">
+                <button onclick="copyToClipboard()">📋 Copy</button>
+                <button onclick="downloadFile('txt')">💾 Download .txt</button>
+                <button onclick="downloadFile('pdf')">💾 Download .pdf</button>
+                <button onclick="speakText()">🔊 Text-to-Speech</button>
+            </div>
+
+            <div class="stats">
+                <span id="charCount">Characters: 0</span>
+                <span id="wordCount">Words: 0</span>
+                <span id="paraCount">Paragraphs: 0</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Advanced Text Converter | MIT License</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
